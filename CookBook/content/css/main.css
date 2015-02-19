@@ -1,0 +1,730 @@
+﻿/* ---------------------------------------------------------
+	1. General reset
+	2. Common site styles
+	3. Styles for responsive breakpoints
+	---------------------------------------------------------*/
+/* ---------------------------------------------------------
+1. General reset
+---------------------------------------------------------*/
+
+
+/*
+ * set default text color
+ * set default font size, line height and font family
+ * set default background
+ */
+.base-container {
+  padding: 0;
+  -webkit-box-shadow: 0px 0px 25px 15px #e1e1e1;
+  box-shadow: 0px 0px 25px 15px #e1e1e1;
+}
+
+.x-body {
+  font-size: 14px;
+}
+
+dt,
+dd {
+  line-height: 48px;
+}
+
+dt {
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: none;
+}
+
+img {
+  border-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+header, footer, article, section, nav, figure, aside, main {
+  display: block;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------------------------------------------------
+2. Common site styles
+---------------------------------------------------------*/
+h2 {
+  text-transform: uppercase;
+  border-bottom: 2px solid #3e3935;
+  padding: 0 0 5px;
+  margin: 0 0 20px;
+}
+h2 time {
+  display: none;
+}
+
+.accessibility {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.accessibility:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+.btn {
+  font-size: 15px;
+  line-height: 17px;
+  padding: 9px 11px 12px;
+  min-width: 198px;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  white-space: normal;
+}
+
+.modal-footer .btn {
+  width: 100px;
+  min-width: 100px;
+  vertical-align: baseline;
+}
+
+.wrap {
+  overflow: hidden;
+}
+
+.desktop-hidden {
+  display: none !important;
+}
+
+/* main container styles */
+#wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-top: 0;
+}
+
+#main {
+  padding: 35px 44px 36px;
+}
+
+#footer {
+  margin: 20px;
+}
+#footer .holder {
+  overflow: hidden;
+  padding: 0 5px;
+}
+
+
+.summary-block + .table-block {
+  margin: -35px 0 0;
+}
+
+.summary-block {
+  font: 24px/32px "GothamNarrow-Medium", Arial, Helvetica, sans-serif;
+  color: #3e3935;
+  margin: 0 0 32px;
+}
+.summary-block .note {
+  padding: 0 39px 14px;
+  position: relative;
+  border-bottom: 1px solid #a4a2a0;
+}
+.summary-block .note:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../images/sprite.png) no-repeat -15px 0;
+  width: 28px;
+  height: 29px;
+}
+.summary-block .note a {
+  text-decoration: underline;
+}
+.summary-block .note a p {
+  margin: 0 0 20px;
+}
+
+.table-holder .btn-title {
+  display: none;
+}
+.table-holder h2 {
+  margin: 0 0 -1px;
+}
+
+.table-holder .btn-title {
+  display: none;
+}
+
+.table-wrap {
+  margin: -17px -15px 17px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .table-box table {
+    font-size: 14px;
+  }
+  .table-box table th {
+    font-size: 16px;
+  }
+}
+.table-box {
+  margin: -4px 0 50px;
+}
+.table-box h2 {
+  margin: 0;
+}
+.table-box table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+}
+.table-box table th {
+  font: 18px/25px "GothamNarrow-Medium", Arial, Helvetica, sans-serif;
+  background: #f9f9f9;
+  padding: 23px 0 22px 30px;
+  border-bottom: 1px solid #aaa8a6;
+  vertical-align: top;
+}
+.table-box table th span.add {
+  display: block;
+  font-size: 14px;
+  line-height: 1;
+  margin: -4px 0 -10px;
+}
+.table-box table th:last-child {
+  text-align: right;
+  padding-right: 42px !important;
+}
+.table-box table td {
+  padding: 0 0 6px 30px;
+}
+.table-box table td span a {
+  font-size: 15px;
+  margin-left: 14px;
+  position: relative;
+}
+.table-box table td:last-child {
+  text-align: right;
+  padding-right: 42px !important;
+}
+.table-box table tr:first-child td {
+  padding-top: 16px;
+}
+.table-box table td.last-child {
+  text-align: right;
+  padding-right: 42px !important;
+}
+
+.table-box table mark {
+  background: none;
+  color: #b22725;
+}
+.table-box table.style2 {
+  margin: 0 0 34px;
+}
+.table-box table.style2 th:first-child {
+  width: 58%;
+}
+@media only screen and (max-width: 1199px) {
+  .table-box table.style2 th:first-child {
+    width: 47%;
+  }
+}
+.table-box table.style2 tr td {
+  border-bottom: 1px solid #aaa8a6;
+  padding: 20px 0 23px 30px;
+}
+.table-box table.style2 tr.total td {
+  padding: 15px 0 16px 30px;
+  border: 0;
+}
+.table-box table.style2 td.last-child {
+  text-align: right;
+  padding-right: 42px !important;
+}
+.table-box table.style2 tbody tr.total td {
+  padding: 17px 0 15px 30px;
+  border: 0;
+}
+.table-box table.style2 tbody tr.total .total-amount {
+  padding-right: 40px;
+}
+
+.item-block {
+  margin: 0 0 32px;
+}
+.item-block h3 {
+  margin: 0 0 21px;
+  text-transform: uppercase;
+}
+.item-block .program-info {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 15px;
+  line-height: 17px;
+  width: 100%;
+}
+.item-block dt {
+  float: left;
+  width: 186px;
+  padding: 0 5px 0 0;
+  font-weight: normal;
+  font-family: "GothamNarrow-Medium", Arial, Helvetica, sans-serif;
+}
+.item-block dd {
+  display: block;
+  overflow: hidden;
+  margin: 0 0 8px;
+}
+.item-block p {
+  margin: 0 0 -3px;
+}
+.item-block .days {
+  color: #b22725;
+  font-family: "GothamNarrow-Medium", Arial, Helvetica, sans-serif;
+}
+.item-block a {
+  font-family: "GothamNarrow-Medium", Arial, Helvetica, sans-serif;
+}
+.item-block .add-list {
+  padding: 0;
+  margin: 0 -9px 24px -30px;
+  list-style: none;
+  text-align: right;
+  font: 15px/25px "GothamNarrow-Medium", Arial, Helvetica, sans-serif;
+}
+.item-block .add-list li {
+  padding: 0 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.item-block .add-list li + li {
+  border-left: 1px solid #e2e3e4;
+}
+.item-block .btn-holder {
+  text-align: right;
+}
+
+.graph-block {
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.graph-block h2 {
+  border-bottom: 2px solid #3e3935;
+  padding: 0 0 3px;
+  margin: 0 0 24px;
+  text-transform: uppercase;
+}
+
+.question-answer h2 {
+  font: 18px/25px "GothamNarrow-Medium", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-transform: none;
+}
+
+.select-form {
+  overflow: hidden;
+  margin: -5px 0 33px;
+  border-bottom: 1px solid #d8d7d6;
+  padding: 0 0 4px;
+}
+.select-form .select-wrap {
+  max-width: 192px;
+  width: 100%;
+  float: left;
+}
+.select-form .business-use {
+  overflow: hidden;
+  font: 15px/28px "GothamNarrow-Bold", Arial, Helvetica, sans-serif;
+}
+.select-form .business-use .business-holder {
+  width: 58%;
+  float: right;
+  padding: 5px 0 0;
+  text-transform: uppercase;
+}
+.select-form .business-use .business-holder strong {
+  float: left;
+  font-weight: normal;
+  margin: 0 14px 0 0;
+}
+.select-form .business-use .business-holder .progress {
+  height: 27px;
+  text-transform: uppercase;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.select-form .business-use .business-holder .progress .progress-bar {
+  line-height: 27px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.select-form .center {
+  margin-top: 2px;
+}
+
+.data-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 15px;
+  border-bottom: 1px solid #a8a6a4;
+}
+
+.data-table thead,
+.data-table tbody,
+.data-table tfoot {
+  display: block !important;
+  width: 100% !important;
+}
+
+.data-table tr {
+  display: table;
+  width: 100%;
+}
+
+.data-table th {
+  display: table-cell;
+  background: #e6e7e8;
+  font: 11px/1 "GothamNarrow-Medium", Arial, Helvetica, sans-serif;
+  text-align: right;
+  padding: 14px 24px 10px;
+  color: #a09f9f;
+  width: 30%;
+  vertical-align: middle;
+}
+
+.data-table th:first-child {
+  text-align: left;
+  width: 70%;
+}
+
+.data-table td {
+  display: table-cell;
+  padding: 12px 24px 13px;
+  text-align: right;
+}
+
+.data-table td:first-child {
+  text-align: left;
+  padding-right: 0;
+}
+
+.adjustment {
+  text-align: center;
+  font-size: 16px;
+}
+.adjustment .adjustment-in {
+  background-color: #ebebea;
+  width: 30%;
+  margin: 0 0 10px 37%;
+  padding: 15px;
+}
+.adjustment .adjustment-in span {
+  margin: 0 15px 0 0;
+}
+.adjustment .adjustment-in sup {
+  color: #5d863b;
+}
+.adjustment .adjustment-in sub {
+  margin: 0 25px 0 0;
+}
+
+.title-block {
+  border-bottom: 1px solid #d8d7d7;
+  margin: 0 0 33px;
+}
+.title-block .menu {
+  float: right;
+  padding-top: 15px;
+  margin: 0 -9px 0 0;
+  list-style: none;
+  text-align: right;
+  font: 12px/14px "GothamNarrow-Bold", Arial, Helvetica, sans-serif;
+}
+.title-block .menu li {
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  padding: 0 19px;
+  margin: 0 0 -1px;
+}
+.title-block .menu a {
+  color: #b2b1b0;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0 12px;
+  border-bottom: 3px solid transparent;
+}
+.title-block .menu a:hover {
+  border-color: #3e3935;
+  color: #3e3935;
+}
+.title-block .menu .active a {
+  border-color: #3e3935;
+  color: #3e3935;
+}
+.title-block h1 {
+  font-family: "GothamNarrow-Book", Arial, Helvetica, sans-serif;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 10px;
+  line-height: 32px;
+  color: #5d863b;
+}
+.title-block:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.total-block {
+  padding-bottom: 36px;
+}
+.total-block .info {
+  font-size: 12px;
+  line-height: 14px;
+  color: #231f20;
+}
+
+.total-list {
+  padding: 0;
+  margin: 0 0 16px;
+  list-style: none;
+  overflow: hidden;
+  border-top: 1px solid #a4a2a0;
+  border-bottom: 1px solid #a4a2a0;
+}
+.total-list li {
+  padding-top: 32px;
+  padding-bottom: 28px;
+  text-align: center;
+}
+.total-list li + li {
+  border-left: 1px solid #a4a2a0;
+}
+.total-list h3 {
+  font-family: "GothamNarrow-Book", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin: 0 0 2px;
+}
+.total-list .amount {
+  font: 60px/1 "GothamNarrow-Medium", Arial, Helvetica, sans-serif;
+  position: relative;
+  font-weight: normal;
+}
+.total-list .amount sup,
+.total-list .amount sub {
+  display: inline-block !important;
+  font-size: 30px;
+  line-height: 30px;
+  color: #5d863b;
+  vertical-align: middle;
+  position: relative;
+}
+.total-list .amount sub {
+  margin: 0 0 0 -20px;
+}
+.total-list .amount i {
+  font-size: 30px;
+  line-height: 40px;
+  font-style: normal;
+  display: inline-block;
+  vertical-align: top;
+}
+.total-list .amount mark {
+  background: none;
+  color: #b22725;
+}
+.total-list .add-info {
+  display: none;
+}
+
+.diagram-overlay {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  top: 112px;
+}
+.diagram-overlay .overlay-value {
+  font-size: 30px;
+}
+.diagram-overlay .overlay-label {
+  position: relative;
+  top: -5px;
+  font-size: 22px;
+  color: #5d863b;
+}
+.diagram-overlay.big {
+  top: 99px;
+}
+.diagram-overlay.big .overlay-value {
+  font-size: 46px;
+}
+.diagram-overlay.big .overlay-label {
+  top: -18px;
+  font-size: 26px;
+  color: #5d863b;
+}
+.diagram-overlay.big .overlay-label.divider {
+  color: black;
+}
+.diagram-overlay.big .overlay-label.mi {
+  color: black;
+  font-size: 20px;
+}
+
+.diagrams {
+  overflow: hidden;
+  padding: 23px 0 0 3.5%;
+  margin-bottom: -2px;
+}
+.diagrams .big-diagram {
+  float: left;
+}
+.diagrams .diagram-holder {
+  position: relative;
+  margin: 0 0 7px;
+}
+.diagrams .diagram-holder > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.diagrams .diagram-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 55px;
+  text-align: center;
+}
+.diagrams .diagram-text img {
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px 0 0;
+}
+.diagrams .diagram-text strong {
+  font: 36px/45px "GothamNarrow-Bold", Arial, Helvetica, sans-serif;
+  display: block;
+  margin: 0;
+}
+.diagrams .diagram-text strong sup {
+  font-size: 16px;
+  color: #73984a;
+  margin: -4px -3px 0 -5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.diagrams .diagram-text strong sub {
+  font-size: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: -12px 0 0;
+}
+.diagrams .diagram-text em {
+  font-style: normal;
+  color: #b0aead;
+  text-transform: uppercase;
+  font-family: "GothamNarrow-Bold", Arial, Helvetica, sans-serif;
+  line-height: 14px;
+  display: block;
+}
+.diagrams .diagram-wrap {
+  overflow: hidden;
+}
+.diagrams .diagram-list {
+  margin: 0;
+  padding: 13px 2.7% 10px;
+  list-style: none;
+  font-size: 15px;
+}
+.diagrams .diagram-list li {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  margin: 0 -4px 0 0;
+  padding: 0 4.3%;
+  position: relative;
+}
+.diagrams .diagram-list li .diagram-text {
+  padding: 20px;
+}
+.diagrams .diagram-list li .diagram-text strong {
+  font-size: 33px;
+  margin: 7px 0;
+}
+@media only screen and (max-width: 1199px) {
+  .diagrams .diagram-list li .diagram-text {
+    padding: 10px;
+  }
+  .diagrams .diagram-list li .diagram-text strong {
+    font-size: 24px;
+    margin: 0;
+  }
+}
+.diagrams .diagram-list li > strong {
+  text-transform: uppercase;
+}
+.diagrams .other-block {
+  text-align: right;
+  overflow: hidden;
+  padding: 21px 6px 5px 45px;
+}
+.diagrams .other-block p.info {
+  overflow: hidden;
+  margin: 45px 0 0;
+}
+.diagrams .other-block .other-box {
+  float: left;
+  background: #f9f9f9;
+  padding: 10px 26px 7px;
+  margin: 0 10px 0 0;
+}
+.diagrams .other-block .other-box strong {
+  font-weight: normal;
+  font-size: 15px;
+}
+.diagrams .other-block .other-box strong b {
+  font-family: "GothamNarrow-Bold", Arial, Helvetica, sans-serif;
+  font-size: 33px;
+  font-weight: normal;
+  display: inline-block;
+  vertical-align: middle;
+  margin: -6px 0 0 19px;
+}
+.diagrams .other-block .other-box strong b sup {
+  font-size: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.diagrams .other-block .other-box strong sup {
+  color: #73984a;
+  font-size: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 0 -6px;
+}

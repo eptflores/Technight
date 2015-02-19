@@ -1,0 +1,71 @@
+﻿<!doctype html>
+<html lang="en" data-ng-app="mainApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome</title>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+    <script src="scripts/ng/app.js"></script>
+    <script src="scripts/ng/controller.js"></script>
+    <script src="scripts/ng/services.js"></script>
+    <script src="scripts/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="content/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="content/css/bootstrap-theme.min.css" />
+    <link type="text/css" rel="stylesheet" href="content/css/main.css" />
+</head>
+<body data-ng-controller="MainController">
+    <div class="container">
+        <div class="row">            
+            <div id="wrapper">
+                <header id="header">
+                    <div class="container">
+                        <div class="row">
+                            <!-- additional navigation -->
+                            <nav class="navbar navbar-default" role="navigation">
+                                <div class="container-fluid">
+                                    <div class="navbar-header">
+                                        <div class="header-holder">
+                                            <h2>Welcome to the Cookbook {{today | date:'yyyy-MM-dd'}}</h2>
+                                        </div>
+                                        <div class="btn-holder pull-right">
+                                            <button type="button" class="btn btn-sm btn-info ">Sign In</button>
+                                            <button type="button" class="btn btn-sm btn-info ">Register</button>
+                                        </div>
+
+                                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                            <!-- main navigation of the page -->
+                                            <ul class="nav navbar-nav">
+                                                <li><a href="#welcome">Home</a></li>
+                                                <li><a href="#list">Recipe List</a></li>
+                                                <li><a href="#add">Add Recipe</a></li>                                                                                                                                                                                              
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+                <!-- data view part here -->
+                <section role="main" id="main" class="container-fluid" data-ng-view="">
+
+                   
+                </section>
+
+                <footer id="footer">
+                    <div class="container-fluid">
+                        <h2>Copyright @ {{today | date:'yyyy'}}   </h2>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
