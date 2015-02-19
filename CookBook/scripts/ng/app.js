@@ -18,6 +18,16 @@ mainApp.config(function ($routeProvider) {
 		   // controller: 'AddController',
 		    templateUrl: 'content/partials/addrecipe.html'
 		})
+		.when('/signin',
+		{
+		    // controller: 'AddController',
+		    templateUrl: 'content/partials/signin.html'
+		})
+		.when('/register',
+		{
+		    // controller: 'AddController',
+		    templateUrl: 'content/partials/register.html'
+		})
 
 		.otherwise({ redirectTo: '/welcome' });
 });

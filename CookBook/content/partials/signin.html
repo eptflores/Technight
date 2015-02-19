@@ -1,3 +1,7 @@
-﻿<div>
-    TODO Sign IN
+﻿<div class="container">
+    <form novalidate class="simple-form">
+        UserName: <input type="text" ng-model="user.name" class="form-control" /><br />
+        Password: <input type="password" ng-model="user.password" class="form-control" /><br />               
+        <input type="submit" ng-click="signin(user)" class="btn btn-primary" value="Sign In" />        
+    </form>
 </div>
