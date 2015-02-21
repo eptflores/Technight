@@ -1,21 +1,16 @@
 var factories = {};
 
-factories.recipeService = function ($http) {
+factories.recipeService = function ($http,$q) {
     return {
         getRecipes: function () {
-            
 
-            var list = [{ "Name": "Chicken Adobo", "Rating": "5", "Origin": "Filipino" }, { "Name": "Chicken Alfredo", "Rating": "5", "Origin": "Italian" }];
 
-            return list;
-
-            /*return $http.get(rootUrl + 'xx/xx')
+            return $http.get('http://private-206f8-technight1.apiary-mock.com/recipes')
                  .then(function (result) {
                      //resolve the promise as the data
-                     //console.log(result.data);
+                     //console.log(result.data);                     
                      return result.data;
-                 });
-                 */
+                 });                 
         }
     }
 };
@@ -49,7 +44,7 @@ factories.languageService = function ($http, $q) {
                 promise.then(function (data) {
                     return data;
                 }, function (reason) {
-                    //alert('Failed: ' + reason);
+                   // alert('Failed: ' + reason);
                 }, function (update) {
                     //alert('Got notification: ' + update);
                 });

@@ -4,7 +4,12 @@ basecontrollers.MainController = function ($scope, recipeService) {
     $scope.today = new Date();
     $scope.message = "Welcome to the Tech Night CookBook.";
 
-    $scope.recipeList = recipeService.getRecipes();
+    recipeService.getRecipes().then(function (dataobj) {
+        $scope.recipeList = dataobj;
+
+    });
+    
+
 
 
     $scope.signin = function (user) {
