@@ -11,7 +11,16 @@ factories.recipeService = function ($http,$q) {
                      //console.log(result.data);                     
                      return result.data;
                  });                 
+        },
+        getRecipe: function (id) {
+            return $http.get('http://private-206f8-technight1.apiary-mock.com/recipes/' + id)
+                 .then(function (result) {
+                     //resolve the promise as the data
+                     //console.log(result.data);                     
+                     return result.data;
+                 });
         }
+
     }
 };
 
