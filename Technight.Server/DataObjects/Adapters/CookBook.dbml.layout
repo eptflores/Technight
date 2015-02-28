@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CookBook">
+  <DataContextMoniker Name="/CookBookDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2e651f77-8aaa-4dbe-b74d-d171470e793f" absoluteBounds="0.75, 0.875, 2, 1.5785953776041664">
+      <DataClassMoniker Name="/CookBookDataContext/Ingredient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e12b4ac9-35a8-4e51-9aca-878bbcd52dd1" absoluteBounds="0.765, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1c23311d-d23a-4b10-9cbb-89296864c716" absoluteBounds="3.5, 1, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/CookBookDataContext/RecipeIngredient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6b3bfcb5-375d-4bca-91c7-9a219fbe9e44" absoluteBounds="3.515, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7b49cb9e-2aa3-4d75-ab2f-2671c0a4809e" absoluteBounds="0.75, 4.375, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/CookBookDataContext/Recipe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4df6d37b-57d4-4956-936c-137e4f8907c9" absoluteBounds="0.765, 4.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f5d8f11b-3cf6-453b-9538-561de0aa6494" absoluteBounds="6.5, 4.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CookBookDataContext/UserPassword" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ef313f3-3d2c-42e3-98a0-0e10b9ff7e50" absoluteBounds="6.515, 4.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="492c752a-a7c4-4915-bcc5-bcf19df2ec82" absoluteBounds="3.75, 3.875, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/CookBookDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8cd56b18-3c87-4fa2-b29a-94a924d90a27" absoluteBounds="3.765, 4.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.69314697265625); (3.5 : 1.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CookBookDataContext/Ingredient/Ingredient_RecipeIngredient" />
+      <nodes>
+        <classShapeMoniker Id="2e651f77-8aaa-4dbe-b74d-d171470e793f" />
+        <classShapeMoniker Id="1c23311d-d23a-4b10-9cbb-89296864c716" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.1194482421875); (3.59375 : 6.1194482421875); (3.59375 : 2.3862939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CookBookDataContext/Recipe/Recipe_RecipeIngredient" />
+      <nodes>
+        <classShapeMoniker Id="7b49cb9e-2aa3-4d75-ab2f-2671c0a4809e" />
+        <classShapeMoniker Id="1c23311d-d23a-4b10-9cbb-89296864c716" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 4.91429768880208); (6.5 : 4.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CookBookDataContext/User/User_UserPassword" />
+      <nodes>
+        <classShapeMoniker Id="492c752a-a7c4-4915-bcc5-bcf19df2ec82" />
+        <classShapeMoniker Id="f5d8f11b-3cf6-453b-9538-561de0aa6494" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

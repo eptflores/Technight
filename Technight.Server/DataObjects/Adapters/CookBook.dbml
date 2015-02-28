@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="sqldev" Class="CookBookDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=tcp:maawtlhk9z.database.windows.net,1433;Initial Catalog=sqldev;User ID=eflores@maawtlhk9z" SettingsObjectName="Technight.Server.Properties.Settings" SettingsPropertyName="sqldevConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Ingredients" Member="Ingredients">
+    <Type Name="Ingredient">
+      <Column Name="IngredientId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="InsertDt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Ingredient_RecipeIngredient" Member="RecipeIngredients" ThisKey="IngredientId" OtherKey="IngredientId" Type="RecipeIngredient" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RecipeIngredients" Member="RecipeIngredients">
+    <Type Name="RecipeIngredient">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RecipeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IngredientId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Ingredient_RecipeIngredient" Member="Ingredient" ThisKey="IngredientId" OtherKey="IngredientId" Type="Ingredient" IsForeignKey="true" />
+      <Association Name="Recipe_RecipeIngredient" Member="Recipe" ThisKey="RecipeId" OtherKey="RecipeId" Type="Recipe" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Recipes" Member="Recipes">
+    <Type Name="Recipe">
+      <Column Name="RecipeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="InsertDt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Origin" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Recipe_RecipeIngredient" Member="RecipeIngredients" ThisKey="RecipeId" OtherKey="RecipeId" Type="RecipeIngredient" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserPasswords" Member="UserPasswords">
+    <Type Name="UserPassword">
+      <Column Name="UserPasswordId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="InsertDt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="User_UserPassword" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="lastlogin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InsertDt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateDt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="User_UserPassword" Member="UserPasswords" ThisKey="UserId" OtherKey="UserId" Type="UserPassword" />
+    </Type>
+  </Table>
+</Database>
