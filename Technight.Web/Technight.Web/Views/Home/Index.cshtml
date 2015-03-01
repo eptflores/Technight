@@ -1,0 +1,41 @@
+﻿<div class="container" ng-cloak>
+    <div class="row">
+        <div id="wrapper">
+            <header id="header">
+                <div class="container">
+                    <div class="row">
+                        <!-- additional navigation -->
+                        <nav class="navbar navbar-default" role="navigation">
+                            <div class="container-fluid">
+                                <div class="navbar-header">
+                                    <div class="header-holder">
+                                        <h2>Welcome to the Cookbook {{today | date:'yyyy-MM-dd'}}</h2>
+                                    </div>
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <!-- main navigation of the page -->
+                                        <ul class="nav navbar-nav">
+                                            <li><a href="#/welcome">Home</a></li>
+                                            <li><a href="#/list">Recipe List</a></li>
+                                            <li><a href="#/add">Add Recipe</a></li>
+                                            <li><a href="#/signin">Sign In</a></li>
+                                            <li><a href="#/register">Register</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <!-- data view part here -->
+            <section role="main" id="main" class="container-fluid" data-ng-view=""></section>
+
+            <footer id="footer">
+                <div class="container-fluid">
+                    <h2>Copyright {{today | date:'yyyy'}}   </h2>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="mainApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")    
+    <script type="text/javascript">
+        var rootURL = "@Url.Content("~")";          
+    </script>
+</head>
+<body data-ng-controller="MainController">
+    @RenderBody()
+
+    @Scripts.Render("~/ng")
+    @Scripts.Render("~/app")
+
+</body>
+</html>
