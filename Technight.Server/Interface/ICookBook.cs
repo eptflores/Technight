@@ -11,6 +11,7 @@ namespace Technight.Server.Interface
     {
          ReadRecipeResponse Read(Request request);
          GetRecipeResponse ReadAll();
+         AddResponse Add(AddRequest request);
     }
     
 }

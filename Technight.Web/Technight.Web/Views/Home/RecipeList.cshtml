@@ -1,0 +1,18 @@
+﻿
+<div class="table-box">
+    <table>
+        <tr>
+            <th>Recipe Name</th>
+            <th>Rating</th>
+            <th>Origin</th>
+            <th>&nbsp;&nbsp;</th>
+        </tr>
+        <tr ng-repeat="recipe in recipeList">
+            <td>{{recipe.Name}}</td>
+            <td>{{recipe.Rating}}</td>
+            <td>{{recipe.Origin}}</td>
+            <td><input type="submit" class="btn btn-primary" value="Get Recipe" ng-click="getsinglerecipe($index)" /></td>
+        </tr>
+    </table>
+
+</div>

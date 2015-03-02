@@ -46,8 +46,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CookBook.dbml</DependentUpon>
     </Compile>
+    <Compile Include="DataObjects\AddRequest.cs" />
     <Compile Include="DataObjects\GetRecipeResponse.cs" />
     <Compile Include="DataObjects\ReadRecipeResponse.cs" />
+    <Compile Include="DataObjects\RecipeItem.cs" />
     <Compile Include="DataObjects\Request.cs" />
     <Compile Include="DataObjects\Response.cs" />
     <Compile Include="Interface\ICookBook.cs" />

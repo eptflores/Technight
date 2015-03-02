@@ -37,7 +37,13 @@ namespace Technight.Server.Services
                 using (var db = this.DBConnection)
                 {
                     var qry = from recipe in db.Recipes
-                              select recipe;
+                              select new RecipeItem() { 
+                               RecipeId = recipe.RecipeId,
+                               Author= recipe.Author,
+                               Rating = recipe.Rating.Value,
+                               Origin= recipe.Origin
+                              
+                              };
 
                     qry = qry.Where(r => r.RecipeId == request.RecipeId);
 
@@ -66,7 +72,14 @@ namespace Technight.Server.Services
                 using (var db = this.DBConnection)
                 {
                     var qry = from recipe in db.Recipes
-                              select recipe;
+                              select new RecipeItem()
+                              {
+                                  RecipeId = recipe.RecipeId,
+                                  Author = recipe.Author,
+                                  Rating = recipe.Rating.Value,
+                                  Origin = recipe.Origin
+
+                              };
 
 
                     response.RecipeItems = qry.ToList();
@@ -80,6 +93,13 @@ namespace Technight.Server.Services
                 response.Success = false;
                 response.Message = ex.Message;
             }
+            return response;
+        }
+
+        AddResponse ICookBook.Add(AddRequest request)
+        {
+            var response = new AddResponse();
+
             return response;
         }
     }

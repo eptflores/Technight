@@ -18,6 +18,32 @@ namespace Technight.Web.Controllers
             return View();
         }
 
+        public ActionResult Welcome()
+        {
+            return PartialView();
+        }
+
+        public ActionResult RecipeList()
+        {
+            return PartialView();
+        }
+
+        public ActionResult AddRecipe()
+        {
+            return PartialView();
+        }
+
+        public ActionResult Signin()
+        {
+            return PartialView();
+        }
+
+        public ActionResult Register()
+        {
+            return PartialView();
+        }
+
+
         [HttpGet]
         //[Authorize]
         public JsonResult Recipes()
@@ -42,7 +68,8 @@ namespace Technight.Web.Controllers
                             Name = recipe.Name,
                             Author = recipe.Author,
                             Origin = recipe.Origin,
-                            Rating = recipe.Rating.Value
+                            Rating = recipe.Rating,
+                            success=true
 
                         });
 

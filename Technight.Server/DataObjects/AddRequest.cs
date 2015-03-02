@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Technight.Server.DataObjects.Adapters;
 
 namespace Technight.Server.DataObjects
 {
-    public class GetRecipeResponse:Response
+    public class AddRequest
     {
-        public List<RecipeItem> RecipeItems { get; set; }
+        public RecipeItem Recipe { get; set; }
     }
 }

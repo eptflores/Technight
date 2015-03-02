@@ -9,6 +9,6 @@ namespace Technight.Server.DataObjects
 {
     public class ReadRecipeResponse: Response
     {
-        public Recipe RecipeItem { get; set; }
+        public RecipeItem RecipeItem { get; set; }
     }
 }
