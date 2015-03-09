@@ -47,6 +47,7 @@
       <DependentUpon>CookBook.dbml</DependentUpon>
     </Compile>
     <Compile Include="DataObjects\AddRequest.cs" />
+    <Compile Include="DataObjects\AddResponse.cs" />
     <Compile Include="DataObjects\GetRecipeResponse.cs" />
     <Compile Include="DataObjects\ReadRecipeResponse.cs" />
     <Compile Include="DataObjects\RecipeItem.cs" />
